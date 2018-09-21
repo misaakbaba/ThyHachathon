@@ -5,13 +5,21 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
+    boolean userVerify = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-        startActivity(intent);
-        finish(); //aaaaa
+        Intent intentLogin = new Intent(SplashActivity.this, LoginActivity.class);
+        Intent intentBriefing = new Intent(SplashActivity.this, BriefingActivity.class);
+        if(userVerify){
+            startActivity(intentBriefing);
+        }
+        else{
+            startActivity(intentLogin);
+        }
+
+
     }
 }
