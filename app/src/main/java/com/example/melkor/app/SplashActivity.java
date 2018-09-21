@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class SplashActivity extends AppCompatActivity {
-    boolean userVerify = true;
+    boolean userVerify = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,4 +25,6 @@ public class SplashActivity extends AppCompatActivity {
 
 
     }
+
+
 }
