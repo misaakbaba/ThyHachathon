@@ -8,7 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class SplashActivity extends AppCompatActivity {
-    boolean userVerify = false;
+    boolean userVerify = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

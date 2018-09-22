@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/ghy">
 
-    <LinearLayout
-        android:id="@+id/buttonLayout"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="6dp"
+        android:text="Navige Et"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/change" />
 
-        <Button
-            android:id="@+id/navigation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="36dp"
-            android:layout_weight="1"
-            android:text=" Yol Tarifi Al"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="350dp" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="387dp"
+        android:layout_height="165dp"
+        android:layout_marginBottom="340dp"
+        app:layout_constraintBottom_toTopOf="@+id/change"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thy_logo" />
 
-        <Button
-            android:id="@+id/change"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_weight="1"
-            android:text="Değiştir"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="334dp" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="148dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:text="Navige Et"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="368dp"
         android:layout_height="435dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+        android:background="@drawable/cv"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:id="@+id/crewLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="52dp"
+            android:layout_width="291dp"
+            android:layout_height="209dp"
+            android:layout_marginBottom="84dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.442"
             app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -76,7 +76,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="  Crew Ekibiniz" />
+                    android:text="  Crew Ekibiniz"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
 
                 <ScrollView
                     android:id="@+id/scrollView2"
@@ -104,10 +106,12 @@
 
                         <TextView
                             android:id="@+id/crewNames"
-                            android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_width="267dp"
+                            android:layout_height="156dp"
                             android:layout_weight="1"
-                            android:text="crewMem1 \n 2  \n 3 \n 4 crewMem1 \n 2  \n 3 \n 4 \n fdf" />
+                            android:text="crewMem1 \n 2  \n 3 \n 4 crewMem1 \n 2  \n 3 \n 4 \n fdf"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
                     </LinearLayout>
                 </ScrollView>
             </LinearLayout>
@@ -115,8 +119,8 @@
 
         <LinearLayout
             android:id="@+id/briefingRoomLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
+            android:layout_width="286dp"
+            android:layout_height="128dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -124,29 +128,33 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/crewLayout"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.398"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <TextView
                 android:id="@+id/briefingRoom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="251dp"
+                android:layout_height="64dp"
                 android:layout_weight="1"
                 android:text="Briefing Oda Numaranız:"
+                android:textColor="@android:color/white"
+                android:textScaleX="1"
+                android:textSize="25sp"
+                android:textStyle="bold|italic"
                 tools:layout_editor_absoluteX="138dp"
-                tools:layout_editor_absoluteY="77dp" />
-
-            <Space
-                android:layout_width="8dp"
-                android:layout_height="10dp"
-                android:layout_weight="1" />
+                tools:layout_editor_absoluteY="100dp" />
 
             <TextView
                 android:id="@+id/briefingRoomNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="69dp"
                 android:layout_weight="1"
-                android:text="324" />
+                android:text="324"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
 
         </LinearLayout>
 
